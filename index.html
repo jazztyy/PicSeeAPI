@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API</title>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.9/vue.min.js'></script>
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/1.9.6/tailwind.min.css' />
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.0/axios.min.js'></script>
+</head>
+
+<body>
+    <div id="app" class="mb-3 bg-yellow-400 h-screen flex flex-col justify-center items-center">
+        <asidebar></asidebar>
+        <div class="mb-3">
+            <input 
+        type="text" 
+        class="rounded-lg py-2" 
+        placeholder="請輸入網址"
+        v-model='inputUrl'
+        >
+        <button @click='getUrl' class="px-3 py-2 bg-white rounded-lg text-black"> 確認</button>
+        </div>
+        <p>歷史紀錄</p>
+        <ul>
+            <li cl v-for='list of historyList' key="list" class="rounded-lg my-5 mx-5 shadow-lg bg-white p-3">
+                {{ list }}
+                <button>修改</button>
+            </li>
+        </ul>
+    </div>
+<!--     
+    <script type="text/x-template" id="asidebar">
+            <aside class="lg:w-1/5 lg:sticky top-10 bg-secondcolor-400  rounded-lg my-5 mx-5 shadow-lg">
+                <ul class="lg:flex-col lg:flex justify-evenly text-2xl text-center"
+                >
+                    <li class="border-l-8 rounded-tl-none lg:rounded-t-lg"
+                    >
+                       取得短網址 
+                        </li>
+                    <li class="border-l-8">
+                      歷史紀錄  
+                        </li>
+                </ul>
+            </aside>
+    </script> -->
+
+    <script src='main.js'></script>
+</body>
+
+</html>
